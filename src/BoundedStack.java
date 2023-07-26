@@ -73,7 +73,7 @@ public class BoundedStack<T> {
     public T peek() {
         T result;
         if (size() > 0) {
-            result = stack.get(stack.size() - 1);
+            result = stack.get(size() - 1);
             peek_status = PEEK_OK;
         } else {
             result = null;
