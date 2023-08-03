@@ -112,6 +112,8 @@ abstract class TwoWayList<T> extends ParentList<T> {
     //Постусловие: курсор сдвинут на один узел влево
     public abstract void left();
 
+    public abstract int getLeftStatus();
+
 }
 
 abstract class LinkedList<T> extends ParentList<T> {
