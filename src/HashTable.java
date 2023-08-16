@@ -12,14 +12,16 @@ public abstract class HashTable<T> {
     //Постусловие: В таблицу добавлено новое значение
     public abstract void put(T value); //добавление значения в таблицу
 
+    //Предусловие: в таблице имеется значение value
     //Постусловие: Из таблицы удалено переданное значение
     public abstract void remove(T value); // удаление значения из таблицы
 
 
     //запросы
 
-    //Предусловие: таблица непустая
-    public abstract int get(T value); //получение элемента из таблицы
+    public abstract boolean get(T value); //содержится ли значение в таблице
+
+    public abstract int size(); // количество элементов в таблице
 
     public abstract int getPutStatus(); //успешно; хэш-функция не нашла свободного места
 
