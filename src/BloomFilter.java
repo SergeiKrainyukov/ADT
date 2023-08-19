@@ -1,7 +1,7 @@
 public abstract class BloomFilter<T> {
 
     //Конструктор
-    //Постусловие: создан битовый массив длиной length
+    //постусловие: создан пустой фильтр Блюма заданного размера
     public BloomFilter(int length) {
     }
 
@@ -11,7 +11,7 @@ public abstract class BloomFilter<T> {
     public abstract void add(T value);
 
     //Запросы:
-    public abstract boolean isValue(T value); // проверка, имеется ли значение в фильтре
+    public abstract boolean isValue(T value); // проверка, имеется ли значение в фильтре (допускаются ложноположительные срабатывания)
 
     public abstract int size(); //размер фильтра
 
